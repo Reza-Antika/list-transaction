@@ -1,0 +1,49 @@
+<div class="flex justify-between bg-red-50">
+    <div class="w-full h-screen mt-4 ml-10">
+        <a href="" class="flex">
+            <fa-icon class="text text-3xl" [icon]="faCoins"></fa-icon>
+            <h3><span class="text-3xl ml-2 font-bold">Rich</span><span class="text-3xl italic -ml-1">Ceh</span></h3>
+        </a>
+
+        <div class="flex justify-center py-32">
+            <img src="./assets/login.png"/>
+        </div>
+    </div>
+
+    <div class="bg-right w-full h-screen py-40">
+        <form class="ngForm px-32" (ngSubmit)="onSubmit()">
+            <h1 class="text-white font-bold text-5xl">Login</h1>
+            <p class="text-xs text-gray-300 mt-2">Login with your Phone Number</p>
+            <input class="w-96 h-10 rounded-lg mt-6 bg-transparent border-2 py-2 px-2 mb-2 text-white" placeholder="Phone Number" type="phone"
+            name="phone"
+            id="phone"
+            [(ngModel)]="model.phone" required/>
+            <input class="w-96 h-10 rounded-lg mt-6 bg-transparent border-2 py-2 px-2 mb-4 text-white" placeholder="Password" type="password"
+            name="password"
+            id="password"
+            [(ngModel)]="model.password" required/>
+            <!-- <div class="flex justify-between items-center mb-6"> -->
+            <!-- <div class="form-group form-check">
+              <input
+                type="checkbox"
+                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-orange-600 checked:border-orange-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                id="exampleCheck2"
+              />
+              <label class="form-check-label inline-block text-gray-300 text-xs" for="exampleCheck2"
+                >Remember me</label
+              > -->
+            <!-- </div>
+            </div> -->
+            <div *ngIf="errormessage" class="alert bg-red-300 text-center text-red py-2 px-2 rounded-lg" role="alert">
+                {{errormessage}}
+            </div>
+            <div class="flex justify-center">
+                <button type="submit" class="text-white w-40 h-10 mt-4 rounded-lg">Log In</button>
+            </div>
+            <div class="text flex justify-center mt-2 text-xs">
+                <p>Forget Password</p>
+            </div>
+
+        </form>
+    </div>
+</div>

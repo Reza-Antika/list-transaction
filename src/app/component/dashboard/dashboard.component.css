@@ -1,0 +1,14 @@
+.bg {
+    background-color: white;
+    height: 100%;
+}
+.bg-in{
+    background-color: #EF5B0C;
+    /* background-color: #FF6464; */
+}
+
+hr{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

@@ -43,9 +43,13 @@
                   "maximumError": "4kb"
                 }
               ],
+              "outputPath": "../../../public/assets/angular",
+              "deployUrl": "/assets/angular/",
               "outputHashing": "all"
             },
-            "development": {
+            "dev": {
+              "outputPath": "dist/assets/angular",
+              "baseHref": "/assets/angular/",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -62,11 +66,11 @@
             "production": {
               "browserTarget": "list_transaction:build:production"
             },
-            "development": {
-              "browserTarget": "list_transaction:build:development"
+            "dev": {
+              "browserTarget": "list_transaction:build:dev"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "dev"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d61c92a0-2194-41dc-bb7b-4a61d2cf9bc6"
   }
 }

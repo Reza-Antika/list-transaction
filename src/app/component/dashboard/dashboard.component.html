@@ -1,0 +1,88 @@
+<div class="flex justify-between space-x-10">
+    <div class="w-full h-full bg-white rounded-lg my-8 py-4 px-6">
+    
+        <div class="mt-10 py-8 px-8">
+            <h3 class="text-center text-3xl -mb-10">Product</h3>
+            <div  class="flex justify-center mt-20 flex-wrap">
+            <div class="py-4 px-4 max-w-sm rounded overflow-hidden bg-white shadow-lg ml-5 mt-4">
+            <img class="w-full h-60" src="./assets/ml.jpg" alt="Product">
+                <button routerLink="/main-product" class="text-white bg-violet-900 rounded-sm py-1 px-4 mt-2">Lihat Product</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="top w-96 bg-white h-screen">
+        <div class="flex justify-between mb-6 py-10 px-4">
+            <h6 class="text-xs">My Card</h6>
+            <h6 class="text-xs text-gray-500">Change Card</h6>
+        </div>
+        
+        <div class="bg px-4 -mt-10 ">
+            <div class="w-80 h-44 rounded-xl py-6 px-4 bg-in drop-shadow-lg -z-3">
+                <h6 class="text-xs mb-2 text-white">My Balance</h6>
+                <p class="text-white text-xl font-bold">Rp{{formprices(user.balance)}}</p>
+                <p class="text-xs mb-2 text-white mt-8">{{user.name}}</p>
+                <div class="flex justify-between">
+                    <p class="text-xs mb-2 text-white">{{user.phone}}</p>
+                    <!-- <p class="text-white font-bold text-lg italic">VISA</p> -->
+                </div>
+            </div>
+
+            <div class="flex justify-between mt-4">
+                <button>
+                    <div class="bg-icon text-xl rounded-lg py-3 px-2 flex justify-center font-bold drop-shadow-xl w-12 h-14 bg-white border-2 border-gray-300 hover:bg-violet-900 hover:text-white">
+                        <fa-icon [icon]="faArrowUp"></fa-icon>
+                    </div>
+                    <p class="text-xs mt-2 font-bold text-center">Transfer</p>
+                </button>
+
+                <button>
+                    <div class="bg-icon text-xl rounded-lg py-3 px-2 flex justify-center font-bold drop-shadow-xl w-12 h-14 bg-white border-2 border-gray-300 hover:bg-violet-900 hover:text-white">
+                        <fa-icon [icon]="faArrowDown"></fa-icon>
+                    </div>
+                    <p class="text-xs mt-2 font-bold text-center">Request</p>
+                </button>
+
+                <button>
+                    <div class="bg-icon text-xl rounded-lg py-3 px-2 flex justify-center font-bold drop-shadow-xl w-12 h-14 bg-white border-2 border-gray-300 hover:bg-violet-900 hover:text-white">
+                        <fa-icon [icon]="faCirclePlus"></fa-icon>
+                    </div>
+                    <p class="text-xs mt-2 font-bold text-center">Top Up</p>
+                </button>
+
+                <button>
+                    <div class="bg-icon text-xl rounded-lg py-3 px-2 flex justify-center font-bold drop-shadow-xl w-12 h-14 bg-white border-2 border-gray-300 hover:bg-violet-900 hover:text-white">
+                        <fa-icon [icon]="faEllipsis"></fa-icon>
+                    </div>
+                    <p class="text-xs mt-2 font-bold text-center">More</p>
+                </button>
+            </div>
+            
+            <hr>
+
+            <div class="mt-10">
+                <div class="flex justify-between">
+                    <h3 class="font-bold text-violet-900 text-sm">Money Insight</h3>
+                    <a href="">
+                        <h3 class="font-medium text-xs text-violet-600">View Details</h3>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x-4 px-3 text-center drop-shadow-lg w-80 h-24 bg-white mt-4 border-2 border-gray-300 rounded-xl">
+                    <div class="text-center">
+                        <p class="mt-4">Income</p>
+                        <p>$0</p>
+                    </div>
+    
+                    <div class="text-center">
+                        <p class="mt-4">Expense</p>
+                        <p>$0</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
